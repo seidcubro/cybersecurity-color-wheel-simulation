@@ -39,7 +39,7 @@ cybersecurity-color-wheel-simulation/
 │   └── attack-scenario.md
 └── assets/
 ```
-Blue Team Deliverable
+## Blue Team Deliverable
 
 The main artifact in this repository is the completed Blue Team running log:
 
@@ -47,95 +47,95 @@ blue-team/blue-team-running-log.pdf
 
 The running log includes:
 
-success criteria
+- success criteria
 
-incident summary
+- incident summary
 
-known facts
+- known facts
 
-hypotheses
+- hypotheses
 
-evidence requests by phase
+- evidence requests by phase
 
-visibility and coverage analysis
+- visibility and coverage analysis
 
-default containment package
+- default containment package
 
-decision log
+- decision log
 
-timeline
+- timeline
 
-collaboration notes
+- collaboration notes
 
-end-of-phase outcomes
+- end-of-phase outcomes
 
-Skills Demonstrated
+## Skills Demonstrated
 
 This project demonstrates practical skills in:
 
-incident response
+- incident response
 
-identity and access security analysis
+- identity and access security analysis
 
-MFA fatigue detection
+- MFA fatigue detection
 
-VPN abuse investigation
+- VPN abuse investigation
 
-lateral movement analysis
+- lateral movement analysis
 
-service account risk analysis
+- service account risk analysis
 
-exfiltration detection
+- exfiltration detection
 
-security documentation
+- security documentation
 
-cross-functional collaboration
+- cross-functional collaboration
 
-Why This Matters
+### Why This Matters
 
 This practical is useful as both:
 
-a cybersecurity portfolio project
+- a cybersecurity portfolio project
 
-a reusable tabletop-style training exercise
+- a reusable tabletop-style training exercise
 
-a foundation for security awareness and response training in organizations
+- a foundation for security awareness and response training in organizations
 
 It reflects real-world security operations themes, especially around identity compromise, incomplete telemetry, business tradeoffs, and evidence-driven containment.
 
-Training Program Potential
+## Training Program Potential
 
 This simulation can be adapted into a repeatable training program for teams inside companies.
 
 Possible audience
 
-SOC analysts
+- SOC analysts
 
-help desk and IAM teams
+- help desk and IAM teams
 
-incident commanders
+- incident commanders
 
-security engineers
+- security engineers
 
-IT managers
+- IT managers
 
-cross-functional technical staff
+- cross-functional technical staff
 
-Possible learning outcomes
+## Possible learning outcomes
 
-identifying identity-based attack signals
+- identifying identity-based attack signals
 
-responding to MFA abuse
+- responding to MFA abuse
 
-correlating logs across multiple systems
+- correlating logs across multiple systems
 
-making containment decisions under uncertainty
+- making containment decisions under uncertainty
 
-balancing security response against business continuity
+- balancing security response against business continuity
 
-documenting incidents clearly and professionally
+- documenting incidents clearly and professionally
 
-Possible progression model
+## Possible progression model
 
 Level 1: identity compromise and MFA fatigue
 
