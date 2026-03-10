@@ -4,4 +4,4 @@ This folder contains the completed Blue Team running log for the simulation.
 
 ## Files
 
-- `blue-team-running-log.pdf` — final polished incident response running log
+- `CS 355 Practical Blue Team Running Log.pdf` — final polished incident response running log
