@@ -1,218 +1,102 @@
-\# Incident Response Framework
+# Incident Response Framework
 
+## Overview
 
+The Cybersecurity Color Wheel Simulation follows an incident response framework similar to those used in enterprise security operations.
 
-\## Overview
-
-
-
-The Cybersecurity Color Wheel Simulation follows a structured incident response framework similar to those used in enterprise security operations.
-
-
-
-The framework emphasizes evidence-driven investigation and coordinated response.
-
-
+The framework focuses on evidence-driven investigation and coordinated response.
 
 ---
 
+## Incident Response Lifecycle
 
+### Detection
 
-\# Incident Response Phases
-
-
-
-The investigation follows several stages.
-
-
-
-\## Detection
-
-
-
-Detection begins when suspicious activity is observed.
-
-
+Detection begins when suspicious activity is identified.
 
 Examples include:
 
-
-
-\- risky authentication attempts
-
-\- MFA fatigue attacks
-
-\- unusual VPN logins
-
-\- abnormal data access
-
-
-
-Investigators gather initial evidence and determine whether further investigation is required.
-
-
+- risky authentication attempts
+- MFA fatigue attacks
+- unusual VPN logins
+- abnormal file access
 
 ---
 
+### Triage
 
+Triage determines:
 
-\## Triage
+- which systems are involved
+- which identities may be compromised
+- whether crown-jewel systems may be at risk
 
-
-
-Triage involves quickly determining:
-
-
-
-\- what systems are involved
-
-\- what accounts may be compromised
-
-\- whether sensitive systems may be at risk
-
-
-
-This phase focuses on identifying the scope of the incident.
-
-
+This phase focuses on quickly determining the scope of the incident.
 
 ---
 
+### Investigation
 
+Investigators collect and correlate evidence across multiple telemetry sources.
 
-\## Investigation
+These sources include:
 
+- identity authentication logs
+- MFA challenge logs
+- VPN logs
+- DNS queries
+- proxy traffic
+- file share audit logs
 
-
-Investigators correlate evidence from multiple telemetry sources.
-
-
-
-These include:
-
-
-
-\- identity logs
-
-\- MFA logs
-
-\- VPN logs
-
-\- DNS queries
-
-\- proxy traffic
-
-\- file share access logs
-
-
-
-The goal is to understand the attacker’s actions and timeline.
-
-
+The goal is to reconstruct attacker behavior and timeline.
 
 ---
 
+### Containment
 
+Once attacker activity is confirmed, containment actions may include:
 
-\## Containment
+- disabling compromised accounts
+- revoking active authentication sessions
+- blocking malicious domains
+- restricting access to sensitive systems
 
-
-
-Once attacker activity is confirmed, containment actions are taken.
-
-
-
-Examples include:
-
-
-
-\- disabling compromised accounts
-
-\- revoking active authentication sessions
-
-\- blocking malicious domains
-
-\- restricting access to sensitive systems
-
-
-
-Containment actions must consider operational impact.
-
-
+Containment must balance security risk with business continuity.
 
 ---
 
-
-
-\## Impact Assessment
-
-
+### Impact Assessment
 
 Investigators determine whether sensitive data was accessed or exfiltrated.
 
+Indicators include:
 
-
-Indicators may include:
-
-
-
-\- access to crown-jewel data
-
-\- archive creation
-
-\- large outbound network transfers
-
-\- suspicious external destinations
-
-
+- access to crown-jewel data
+- archive creation
+- large outbound transfers
+- suspicious external destinations
 
 ---
 
+### Recovery
 
+Recovery actions may include:
 
-\## Recovery
-
-
-
-After containment, systems and accounts are restored.
-
-
-
-Recovery may include:
-
-
-
-\- credential resets
-
-\- additional monitoring
-
-\- system patching
-
-\- security configuration improvements
-
-
+- credential resets
+- enhanced monitoring
+- configuration updates
+- improved security controls
 
 ---
 
+### Lessons Learned
 
+After the incident, teams evaluate:
 
-\## Lessons Learned
+- detection gaps
+- architectural weaknesses
+- monitoring limitations
+- response improvements
 
-
-
-After the incident is resolved, teams evaluate:
-
-
-
-\- detection gaps
-
-\- monitoring limitations
-
-\- architectural weaknesses
-
-\- response process improvements
-
-
-
-These insights help strengthen security defenses.
+These lessons strengthen future defenses.
 
