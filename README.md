@@ -38,6 +38,7 @@ cybersecurity-color-wheel-simulation/
 ├── scenario/
 │   └── attack-scenario.md
 └── assets/
+```
 Blue Team Deliverable
 
 The main artifact in this repository is the completed Blue Team running log:
