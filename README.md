@@ -39,6 +39,22 @@ cybersecurity-color-wheel-simulation/
 │   └── attack-scenario.md
 └── assets/
 ```
+
+## Visual Diagrams
+
+### Attack Chain
+
+See: [`assets/attack-chain-diagram.md`](assets/attack-chain-diagram.md)
+
+### Network Architecture
+
+See: [`assets/network-architecture-diagram.md`](assets/network-architecture-diagram.md)
+
+### Incident Timeline
+
+See: [`assets/incident-timeline-diagram.md`](assets/incident-timeline-diagram.md)
+
+
 ## Blue Team Deliverable
 
 The main artifact in this repository is the completed Blue Team running log:
