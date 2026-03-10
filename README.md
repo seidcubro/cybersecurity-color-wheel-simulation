@@ -1,170 +1,202 @@
 ﻿# Cybersecurity Color Wheel Simulation
 
-A structured incident response case study based on a cybersecurity color wheel practical focused on identity compromise, MFA fatigue, VPN abuse, lateral movement, and probable exfiltration.
+A structured **incident response case study** investigating an identity compromise involving MFA fatigue, VPN access abuse, lateral movement, and probable data exfiltration.
+
+This project documents a simulated enterprise security incident and demonstrates how a Blue Team investigation can reconstruct attacker activity using identity, network, and file-access telemetry.
+
+---
 
 ## Overview
 
-This repository documents a Blue Team investigation for a simulated enterprise security incident. The scenario centers on a suspicious 2:13 AM VPN login tied to a compromised finance user account. After repeated MFA pushes, the attacker gained access, pivoted through a service account, reached a crown-jewel file share, staged an archive, and initiated likely data exfiltration.
+The scenario centers on a suspicious **2:13 AM VPN login** tied to a compromised finance employee account.
 
-The project is organized as both a portfolio artifact and a foundation for future cybersecurity training use.
+After repeated MFA push prompts, the attacker gained remote access through the organization’s VPN gateway and began interacting with internal systems.
 
-## Scenario Summary
+Evidence indicates the attacker then:
 
-The simulated organization, WV RUS, faced an identity-driven attack that unfolded in several stages:
+- abused a service account  
+- accessed a crown-jewel research file share  
+- created a compressed archive of sensitive files  
+- transferred data to a suspicious external cloud domain  
 
-1. A high-risk sign-in attempt originated from an unfamiliar geographic region and a new device.
-2. Multiple MFA push notifications were sent to the victim.
-3. One MFA request was approved, allowing VPN access.
-4. Internal access was established and correlated to a new VPN session.
-5. A service account was then used across multiple hosts, indicating lateral movement.
-6. Sensitive data on the `\\FS-RES-02\Research_Contracts` share was accessed and staged into an archive.
-7. DNS, proxy, and VPN byte-count evidence suggested probable exfiltration to a suspicious cloud storage destination.
+The project demonstrates how defenders correlate evidence across multiple systems to determine whether a **data breach occurred**.
+
+---
+
+## Key Investigation Themes
+
+This simulation focuses on several real-world attack techniques:
+
+- phishing and credential compromise  
+- MFA fatigue attacks  
+- suspicious VPN logins  
+- service account abuse  
+- lateral movement within the network  
+- data staging and exfiltration indicators  
+
+---
 
 ## Repository Structure
 
-```text
 cybersecurity-color-wheel-simulation/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── docs/
-│   ├── simulation-overview.md
-│   └── training-program-notes.md
-├── blue-team/
-│   ├── README.md
-│   └── blue-team-running-log.pdf
-├── white-team/
-│   └── evidence-catalog-summary.md
-├── scenario/
-│   └── attack-scenario.md
-└── assets/
-```
+
+README.md  
+LICENSE  
+.gitignore  
+
+blue-team/  
+- CS 355 Practical Blue Team Running Log.pdf  
+- Blue Team.pdf  
+- playbook.md  
+
+white-team/  
+- White Team Evidence Catalog.pdf  
+
+scenario/  
+- attack-scenario.md  
+- organization-profile.md  
+- network-architecture.md  
+
+docs/  
+- incident-response-framework.md  
+- simulation-overview.md  
+- training-program-notes.md  
+
+assets/  
+- attack-chain-diagram.md  
+- network-architecture-diagram.md  
+- incident-timeline-diagram.md  
+- README.md  
+
+---
+
+## Blue Team Investigation
+
+The Blue Team conducted the investigation using a structured incident response process.
+
+Primary responsibilities included:
+
+- detecting suspicious authentication activity  
+- requesting evidence from available telemetry sources  
+- correlating identity and network events  
+- identifying attacker movement within the environment  
+- determining whether sensitive data was accessed or exfiltrated  
+
+The full investigation log is documented in:
+
+blue-team/CS 355 Practical Blue Team Running Log.pdf
+
+---
+
+## Evidence Sources
+
+The investigation relied on multiple telemetry sources.
+
+### Identity Logs
+
+- IdP authentication logs  
+- MFA challenge records  
+- risk-based login alerts  
+
+These logs revealed the initial suspicious login attempt and MFA fatigue attack.
+
+### VPN Logs
+
+- authentication records  
+- assigned internal IP address  
+- session duration and data transfer statistics  
+
+These logs confirmed remote access to the internal network.
+
+### DNS and Proxy Logs
+
+DNS and proxy telemetry revealed connections to a suspicious external cloud storage domain.
+
+These connections coincided with large outbound network transfers.
+
+### File Share Audit Logs
+
+File access logs revealed activity on the organization’s crown-jewel file server.
+
+Evidence included:
+
+- bulk reads from the research contracts directory  
+- archive creation  
+- file staging in temporary directories  
+
+---
+
+## Crown Jewel Systems
+
+The most sensitive assets in the environment include:
+
+\\FS-RES-02\Research_Contracts  
+Sensitive research contracts and deliverables.
+
+Student_Records  
+Academic and personal student information.
+
+Access to these systems is treated as a potential breach event.
+
+---
 
 ## Visual Diagrams
 
-### Attack Chain
+The repository includes diagrams explaining the attack and investigation.
 
-See: [`assets/attack-chain-diagram.md`](assets/attack-chain-diagram.md)
+Attack Chain  
+assets/attack-chain-diagram.md
 
-### Network Architecture
+Network Architecture  
+assets/network-architecture-diagram.md
 
-See: [`assets/network-architecture-diagram.md`](assets/network-architecture-diagram.md)
+Incident Timeline  
+assets/incident-timeline-diagram.md
 
-### Incident Timeline
-
-See: [`assets/incident-timeline-diagram.md`](assets/incident-timeline-diagram.md)
-
-
-## Blue Team Deliverable
-
-The main artifact in this repository is the completed Blue Team running log:
-
-blue-team/blue-team-running-log.pdf
-
-The running log includes:
-
-- success criteria
-
-- incident summary
-
-- known facts
-
-- hypotheses
-
-- evidence requests by phase
-
-- visibility and coverage analysis
-
-- default containment package
-
-- decision log
-
-- timeline
-
-- collaboration notes
-
-- end-of-phase outcomes
-
-## Skills Demonstrated
-
-This project demonstrates practical skills in:
-
-- incident response
-
-- identity and access security analysis
-
-- MFA fatigue detection
-
-- VPN abuse investigation
-
-- lateral movement analysis
-
-- service account risk analysis
-
-- exfiltration detection
-
-- security documentation
-
-- cross-functional collaboration
-
-### Why This Matters
-
-This practical is useful as both:
-
-- a cybersecurity portfolio project
-
-- a reusable tabletop-style training exercise
-
-- a foundation for security awareness and response training in organizations
-
-It reflects real-world security operations themes, especially around identity compromise, incomplete telemetry, business tradeoffs, and evidence-driven containment.
+---
 
 ## Training Program Potential
 
-This simulation can be adapted into a repeatable training program for teams inside companies.
+This simulation can be adapted into a cybersecurity training exercise for organizations.
 
-Possible audience
+Possible training audiences include:
 
-- SOC analysts
+- SOC analysts  
+- security engineers  
+- IT administrators  
+- incident response teams  
 
-- help desk and IAM teams
+Learning objectives may include:
 
-- incident commanders
+- identifying identity-based attacks  
+- investigating MFA abuse  
+- correlating security telemetry  
+- balancing containment actions with business risk  
+- documenting incidents clearly and professionally  
 
-- security engineers
+---
 
-- IT managers
+## Skills Demonstrated
 
-- cross-functional technical staff
+This project demonstrates practical cybersecurity skills including:
 
-## Possible learning outcomes
+- incident response investigation  
+- identity compromise detection  
+- MFA fatigue attack analysis  
+- VPN telemetry analysis  
+- lateral movement detection  
+- data exfiltration indicators  
+- security documentation and reporting  
 
-- identifying identity-based attack signals
+---
 
-- responding to MFA abuse
-
-- correlating logs across multiple systems
-
-- making containment decisions under uncertainty
-
-- balancing security response against business continuity
-
-- documenting incidents clearly and professionally
-
-## Possible progression model
-
-Level 1: identity compromise and MFA fatigue
-
-Level 2: VPN access and lateral movement
-
-Level 3: data staging, exfiltration indicators, and breach determination
-
-Notes
-
-This repository is intended for educational, portfolio, and training design purposes. It does not include exploit code or offensive tooling. The focus is on defense, evidence handling, response workflow, and security training design.
-
-Author
+## Author
 
 Seid Cubro
 
-Cloud Computing student with interests in cybersecurity, incident response, infrastructure, and practical security operations.
+Cloud Computing student with interests in:
+
+- cybersecurity  
+- security operations  
+- cloud infrastructure  
+- incident response
