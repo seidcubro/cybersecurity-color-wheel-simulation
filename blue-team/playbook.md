@@ -1,8 +1,8 @@
-\# Blue Team Incident Response Playbook
+# Blue Team Incident Response Playbook
 
 
 
-\## Overview
+## Overview
 
 
 
@@ -18,7 +18,7 @@ The goal of the Blue Team is to detect, investigate, contain, and document secur
 
 
 
-\# Blue Team Objectives
+# Blue Team Objectives
 
 
 
@@ -26,19 +26,19 @@ The Blue Team is responsible for:
 
 
 
-\- Detecting suspicious activity
+- Detecting suspicious activity
 
-\- Investigating identity and network events
+- Investigating identity and network events
 
-\- Correlating evidence across systems
+- Correlating evidence across systems
 
-\- Containing attacker access
+- Containing attacker access
 
-\- Preventing lateral movement
+- Preventing lateral movement
 
-\- Identifying potential data exfiltration
+- Identifying potential data exfiltration
 
-\- Documenting the incident timeline
+- Documenting the incident timeline
 
 
 
@@ -46,7 +46,7 @@ The Blue Team is responsible for:
 
 
 
-\# Investigation Workflow
+# Investigation Workflow
 
 
 
@@ -54,19 +54,19 @@ The investigation process follows a structured workflow.
 
 
 
-1\. Detect suspicious activity
+1. Detect suspicious activity
 
-2\. Request relevant evidence from the White Team
+2. Request relevant evidence from the White Team
 
-3\. Correlate identity, network, and system activity
+3. Correlate identity, network, and system activity
 
-4\. Develop hypotheses explaining attacker behavior
+4. Develop hypotheses explaining attacker behavior
 
-5\. Take containment actions
+5. Take containment actions
 
-6\. Document the timeline and decisions
+6. Document the timeline and decisions
 
-7\. Evaluate whether the event qualifies as a breach
+7. Evaluate whether the event qualifies as a breach
 
 
 
@@ -74,7 +74,7 @@ The investigation process follows a structured workflow.
 
 
 
-\# Evidence Sources
+# Evidence Sources
 
 
 
@@ -82,7 +82,7 @@ During the simulation, the Blue Team may request evidence from multiple telemetr
 
 
 
-\## Identity Logs
+## Identity Logs
 
 
 
@@ -94,11 +94,11 @@ Examples:
 
 
 
-\- IdP / SSO sign-in logs
+- IdP / SSO sign-in logs
 
-\- MFA challenge logs
+- MFA challenge logs
 
-\- Conditional access risk flags
+- Conditional access risk flags
 
 
 
@@ -110,7 +110,7 @@ These logs help determine whether accounts were compromised.
 
 
 
-\## VPN Logs
+## VPN Logs
 
 
 
@@ -122,15 +122,15 @@ Key data includes:
 
 
 
-\- authentication success or failure
+- authentication success or failure
 
-\- source IP address
+- source IP address
 
-\- assigned internal VPN IP
+- assigned internal VPN IP
 
-\- session duration
+- session duration
 
-\- bytes transferred
+- bytes transferred
 
 
 
@@ -138,7 +138,7 @@ Key data includes:
 
 
 
-\## DNS Logs
+## DNS Logs
 
 
 
@@ -150,11 +150,11 @@ These help identify:
 
 
 
-\- suspicious external destinations
+- suspicious external destinations
 
-\- connections to cloud storage providers
+- connections to cloud storage providers
 
-\- possible command-and-control domains
+- possible command-and-control domains
 
 
 
@@ -162,7 +162,7 @@ These help identify:
 
 
 
-\## File Share Audits
+## File Share Audits
 
 
 
@@ -174,13 +174,13 @@ Key indicators include:
 
 
 
-\- bulk file reads
+- bulk file reads
 
-\- archive creation
+- archive creation
 
-\- unusual access patterns
+- unusual access patterns
 
-\- access to crown-jewel data
+- access to crown-jewel data
 
 
 
@@ -188,7 +188,7 @@ Key indicators include:
 
 
 
-\# Containment Strategy
+# Containment Strategy
 
 
 
@@ -196,17 +196,17 @@ Once attacker activity is confirmed, containment actions may include:
 
 
 
-\- disabling compromised accounts
+- disabling compromised accounts
 
-\- revoking active authentication sessions
+- revoking active authentication sessions
 
-\- forcing password resets
+- forcing password resets
 
-\- investigating service account activity
+- investigating service account activity
 
-\- blocking malicious domains
+- blocking malicious domains
 
-\- isolating compromised systems
+- isolating compromised systems
 
 
 
@@ -218,7 +218,7 @@ Containment actions must balance security with business continuity.
 
 
 
-\# Incident Documentation
+# Incident Documentation
 
 
 
@@ -226,17 +226,17 @@ Throughout the investigation, the Blue Team maintains a running log containing:
 
 
 
-\- confirmed facts
+- confirmed facts
 
-\- investigation hypotheses
+- investigation hypotheses
 
-\- requested evidence
+- requested evidence
 
-\- containment actions
+- containment actions
 
-\- timeline of events
+- timeline of events
 
-\- collaboration notes
+- collaboration notes
 
 
 
@@ -248,7 +248,7 @@ Accurate documentation is essential for determining whether a breach occurred an
 
 
 
-\# Success Criteria
+# Success Criteria
 
 
 
@@ -256,13 +256,13 @@ The Blue Team succeeds when it can:
 
 
 
-\- detect attacker activity
+- detect attacker activity
 
-\- prevent or limit lateral movement
+- prevent or limit lateral movement
 
-\- identify possible data exfiltration
+- identify possible data exfiltration
 
-\- maintain a clear investigation timeline
+- maintain a clear investigation timeline
 
-\- communicate findings clearly to other teams
+- communicate findings clearly to other teams
 
